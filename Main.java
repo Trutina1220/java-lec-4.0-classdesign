@@ -54,5 +54,13 @@ public class Main {
         System.out.println(t1.getPerimeter());
         System.out.println(t1.getType());
 
+//        Testing account
+        Customer cu1 = new Customer(1,"John",5,'m');
+        Account ac1 = new Account(1,cu1,100000);
+        ac1.deposit(200000,ac1);
+        System.out.println(ac1.getBalance());
+        ac1.withdraw(100000,ac1);
+        System.out.println(ac1.getBalance());
+
     }
 }

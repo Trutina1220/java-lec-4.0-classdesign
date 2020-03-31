@@ -44,10 +44,24 @@ public class Account {
         return this.customer.getName();
     }
 
-//    public Account deposit(double amount)
-//    {
-//        this.balance+= amount;
-//
-//    }
+    public Account deposit(double amount,Account account)
+    {
+        account.balance += amount;
+        return account;
+
+    }
+
+    public Account withdraw(double amount, Account account)
+    {
+        if(account.balance>=amount)
+        {
+            account.balance -= amount;
+        }
+        else
+        {
+            System.out.println("Amount withdrawn exceeds the current balance");
+        }
+        return account;
+    }
 
 }
